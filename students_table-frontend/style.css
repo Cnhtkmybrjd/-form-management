@@ -1,0 +1,59 @@
+body {
+    min-width: 320px;
+}
+
+.container {
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.form-student-data,
+.form-filter-students {
+    margin-bottom: 20px;
+}
+
+.btn-reset {
+    width: 100%;
+    height: 100%;
+    padding: 0 0 0 15px;
+    border: none;
+    outline: none;
+    background-color: inherit;
+    cursor: pointer;
+    color: white;
+    text-align: start;
+}
+
+.btn:hover {
+    color: white;
+}
+
+.btn-check:focus+.btn, .btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.btn:active {
+    color: white;
+}
+
+.sort-btn {
+    position: relative;
+}
+
+.sort-btn-circle::after{
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #0d6efd;
+    transform: rotate(-45deg) translateY(-50%);
+    transition: transform 0.3s ease-in-out;
+    
+}
+
+

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Сортировка</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="style.css">
+        <script defer src="script.js"></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <h3 class="header">Добавить студентов</h3>
+
+            <form class="row g-3 form-student-data" id="add_student">
+
+                <div class="col-md-4">
+                    <label for="student_surname" class="form-label">Фамилия</label>
+                    <input type="text" class="form-control form-select-sm student-info" id="student_surname">
+                    <div class="alert alert-primary d-flex align-items-center d-none" role="alert">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+                            <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                        </svg>
+                        <div>Введите фамилию</div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <label for="student_name" class="form-label">Имя</label>
+                    <input type="text" class="form-control form-select-sm student-info" id="student_name">
+                    <div class="alert alert-primary d-flex align-items-center d-none" role="alert">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+                            <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                        </svg>
+                        <div>Введите имя</div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <label for="student_middle_name" class="form-label">Отчество</label>
+                    <input type="text" class="form-control form-select-sm student-info" id="student_middle_name">
+                    <div class="alert alert-primary d-flex align-items-center d-none" role="alert">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+                            <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                        </svg>
+                        <div>Введите отчество</div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <label for="student_date_of_birth" class="form-label">Дата рождения</label>
+                    <input type="date" class="form-control form-select-sm student-info" id="student_date_of_birth">
+                    <div class="alert alert-primary d-flex align-items-center d-none" role="alert">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+                            <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                        </svg>
+                        <div>Введите корректную дату</div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <label for="student_start_date" class="form-label">Начало обучения</label>
+                    <select class="form-select form-select-sm student-info" id="student_start_date" aria-label=".form-select-sm example">
+                        <option value ="2000" selected>2000</option>
+                    </select>
+                    <div class="alert alert-primary d-flex align-items-center d-none" role="alert">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+                            <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                        </svg>
+                        <div>Введите название факультета</div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <label for="student_faculty" class="form-label">Факультет</label>
+                    <input type="text" class="form-control form-select-sm student-info" id="student_faculty">
+                    <div class="alert alert-primary d-flex align-items-center d-none" role="alert">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
+                            <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                        </svg>
+                        <div>Введите название факультета</div>
+                    </div>
+                </div>
+
+                <div class="col-12">
+                    <button type="submit" class="btn-sm btn-primary">Добавить студента</button>
+                </div>
+            </form>
+
+            <h3 class="header">Фильтр</h3>
+
+            <form class="row g-3 form-filter-students" id="filter-form">
+
+                <div class="col-md-6">
+                    <input type="text" class="form-control form-select-sm" name="fio" id="fio" placeholder="Ф.И.О.">
+                </div>
+
+                <div class="col-md-6">
+                    <input type="text" class="form-control form-select-sm" name="facult" id="facult" placeholder="Факультет">
+                </div>
+
+                <div class="col-md-6">
+                    <input type="text" class="form-control form-select-sm" name="first-year" id="first-year" placeholder="Год начала обучения">
+                </div>
+
+                <div class="col-md-6">
+                    <input type="text" class="form-control form-select-sm" name="last-year" id="last-year" placeholder="Год окончания обучения">
+                </div>
+
+                <div class="col-12">
+                    <button type="submit" class="btn-sm btn-primary">Фильтровать</button>
+                </div>
+
+            </form>
+
+            <h3 class="header">Список студентов</h3>
+
+            <table class="table table-dark table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col"><button id="surname" class="btn btn-reset sort-btn">Ф.И.О.</button></th>
+                        <th scope="col"><button id="birthday" class="btn btn-reset sort-btn">Дата рождения</button></th>
+                        <th scope="col"><button id="startDate" class="btn btn-reset sort-btn">Старт и окончание обучения</button></th>
+                        <th scope="col"><button id="faculty" class="btn btn-reset sort-btn">Факультет</button></th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                </tbody>
+            </table>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </body>
+
+</html>
